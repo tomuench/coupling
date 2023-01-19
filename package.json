@@ -1,0 +1,23 @@
+{
+  "name": "coupling",
+  "version": "0.0.1",
+  "description": " Analyzing Coupling between web components (w3c, angular...)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/index.mjs"
+  },
+  "keywords": [
+    "coupling",
+    "static",
+    "code",
+    "analysis"
+  ],
+  "author": "Tobias Münch",
+  "license": "MIT",
+  "dependencies": {
+    "tokenizr": "^1.6.8"
+  },
+  "devDependencies": {
+    "dependency-cruiser": "^12.5.0"
+  }
+}
