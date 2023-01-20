@@ -1,3 +1,4 @@
+import { Component } from '../../lib/models/component.mjs';
 import { WebComponentParser } from '../../lib/parser/webComponentParser.mjs';
 
 const EXAMPLE_INDEX_FILE = "./example/index.ts";
@@ -26,11 +27,13 @@ describe('WebComponentParser', () => {
         });
 
         it('should load componentA', () => {
-            
+            const expected = [new Component("", "ComponentA")];
+            expect(parser.analyzedComponents).toEqual(expect.arrayContaining(expected));
         });
 
         it('should load componentB', () => {
-            
+            const expected = [new Component("","ComponentB")];
+            expect(parser.analyzedComponents).toEqual(expect.arrayContaining(expected));
         });
         
     });
