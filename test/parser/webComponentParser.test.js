@@ -27,12 +27,12 @@ describe('WebComponentParser', () => {
         });
 
         it('should load componentA', () => {
-            const expected = [new Component("", "ComponentA")];
+            const expected = [new Component("component-a", "ComponentA")];
             expect(parser.analyzedComponents).toEqual(expect.arrayContaining(expected));
         });
 
         it('should load componentB', () => {
-            const expected = [new Component("","ComponentB")];
+            const expected = [new Component("component-b","ComponentB")];
             expect(parser.analyzedComponents).toEqual(expect.arrayContaining(expected));
         });
         
