@@ -23,7 +23,7 @@ describe('WebComponentParser', () => {
         });
 
         it('should load components', () => {
-            expect(parser.analyzedComponents.length).toEqual(2);
+            expect(parser.analyzedComponents.length).toEqual(3);
         });
 
         it('should load componentA', () => {
@@ -33,6 +33,11 @@ describe('WebComponentParser', () => {
 
         it('should load componentB', () => {
             const expected = [new Component("component-b","ComponentB")];
+            expect(parser.analyzedComponents).toEqual(expect.arrayContaining(expected));
+        });
+
+        it('should load componentC', () => {
+            const expected = [new Component("component-c","ComponentC")];
             expect(parser.analyzedComponents).toEqual(expect.arrayContaining(expected));
         });
         
